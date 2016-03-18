@@ -1,0 +1,401 @@
+html {
+    background: url("tomato.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+.burg{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin-right: 0.3em;
+    border-top: 0.2em solid #fff;
+    border-bottom: 0.2em solid #fff;
+	margin-left: 15px;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.burg:before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #fff;
+}
+
+
+
+.row1{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height:30px;
+}
+
+
+
+
+
+  .row2{
+    clear: both;
+    width: 100%;
+
+  height: 90px;
+
+}
+
+
+.text-box{
+width:25%;
+background-color: rgba(255, 255, 240, 0.5);
+border-radius: 30%;
+text-align: center;
+min-width: 500px;
+margin: 0 auto;
+height:90px;
+padding-bottom:10px;
+}
+
+
+
+.text-box p {
+  font-size: 80px;
+  color: black;
+  opacity: 1;
+
+  text-align: center;
+font-family: 'Peralta', cursive;
+}
+
+
+
+
+.row3{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+
+
+}
+
+
+
+
+.col1{
+  width:8.33%;
+}
+
+.col2{
+  width:16.66%;
+}
+
+.col3{
+  width:25%;
+}
+
+.col4{
+  width:33.33%;
+}
+
+.col5{
+  width:41.66%;
+}
+
+.col6{
+  width:50%;
+  margin: 0 auto;
+
+}
+
+.col7{
+  width:58.33%;
+}
+
+
+
+.col8{
+  width:66.66%;
+}
+
+.col9{
+  width:75%;
+  margin:0 auto;
+
+}
+
+.col10{
+  width:83.33%;
+}
+
+.col11{
+  width:91.66%;
+}
+
+.col12{
+width: 100%;
+
+}
+
+
+
+
+
+
+
+
+.motto{
+  margin-top: 400px;
+  margin: 0 auto;
+  width:500px;
+  font-family: 'Indie Flower', cursive;
+font-size: 38px;
+  flex-wrap: wrap;
+color:white;
+}
+
+.motto b{
+  font-size: 45px;
+}
+
+.hours{
+
+
+height: 200px;
+width:600px;
+color:white;
+margin:0 auto;
+font-family: 'Peralta', cursive;
+
+
+}
+
+
+
+.hours ul{
+
+  list-style: none;
+}
+
+.hours li{
+  font-size:26px;
+
+}
+.hours li p{
+  font-size: 30px;
+  color: white;
+margin-left: 50px;
+}
+
+
+.cssmenu {
+  background: #333333;
+  width: auto;
+text-align: center;
+
+}
+
+
+.cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+  text-align: center;
+
+}
+
+.cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+    margin: 0 auto;
+    width:150px;
+}
+
+
+.cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+
+.cssmenu ul li a:hover:before {
+  width: 100%;
+}
+
+.cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  background:white;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+
+.drop{
+width:100%;
+background-color:#333333 ;
+height:50px;
+display:none;
+}
+
+@media screen and (max-width: 1300px){
+
+  .row4{
+    width: 100%;
+    display: block;
+
+    margin-top: 100px;
+  }
+
+
+}
+
+@media screen and (max-width: 1067px){
+
+   .cssmenu ul li {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+        margin: 0 auto;
+        width:120px;
+    }
+
+    .cssmenu ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      padding: 10%;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      position: relative;
+      -webkit-transition: color .25s;
+      -moz-transition: color .25s;
+      -ms-transition: color .25s;
+      -o-transition: color .25s;
+      transition: color .25s;
+    }
+
+.menusized li{
+  padding:10px;
+  display:block;
+  cursor: pointer;
+}
+
+
+  .motto{
+    margin-top: 400px;
+    margin: 0 auto;
+    width:300px;
+
+    font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+  color:white;
+  }
+
+  .hours{
+
+
+  height: 200px;
+  width:300px;
+  color:white;
+
+  font-family: 'Peralta', cursive;
+  margin:0 auto;
+  }
+
+  .hours li{
+    font-size:20px;
+
+  }
+  .hours li p{
+    font-size: 24px;
+    color: white;
+  margin-left: 50px;
+  }
+
+
+
+
+}
+
+
+@media screen and (max-width: 600px){
+.drop{
+display: block;
+
+}
+.cssmenu{
+  display:none;
+}
+
+.cssmenu ul li {
+  display: block;
+  padding: 0;
+  margin: 0;
+    margin: 0 auto;
+    width:120px;
+}
+
+  .text-box{
+  width:25%;
+  background-color: rgba(255, 255, 240, 0.5);
+
+  border-radius: 30%;
+  text-align: center;
+  min-width: 300px;
+  margin: 0 auto;
+  height:70px;
+
+  }
+
+
+
+  .text-box p {
+    font-size: 50px;
+    color: black;
+    opacity: 1;
+
+    text-align: center;
+  font-family: 'Peralta', cursive;
+  }
+
+ .col6{
+	width: 100%
+ }
+
+
+}

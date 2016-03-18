@@ -1,0 +1,356 @@
+html {
+    background: url("tomato.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+img{
+	width:350px;
+	height:200px;
+}
+
+.burg{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin-right: 0.3em;
+    border-top: 0.2em solid #fff;
+    border-bottom: 0.2em solid #fff;
+	margin-left: 15px;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.burg:before {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    left: 0px;
+    width: 100%;
+    border-top: 0.2em solid #fff;
+}
+
+
+.row1{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height:30px;
+
+
+
+
+}
+
+
+
+.row2{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 35px;
+
+
+}
+.row2 p{
+text-align: center;
+margin: 0 auto;
+font-size: 50px;
+font-style: oblique;
+display: flex;
+
+
+  }
+
+  .row3{
+    width: 100%;
+display:flex;
+flex-wrap: wrap;
+
+clear: both;
+text-align: center;
+z-index:1;
+
+}
+
+.row4{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+height:70px;
+
+}
+
+.col1{
+  width:8.33%;
+}
+
+.col2{
+  width:16.66%;
+}
+
+.col3{
+  width:25%;
+}
+
+.r{
+  width:33.33%;
+  text-align: center;
+ min-width:350px;
+}
+.m{
+  width:33.33%;
+  text-align: center;
+ min-width:350px;
+}
+
+.l{
+  width:33.33%;
+  text-align: center;
+  min-width:350px;
+}
+.col5{
+  width:41.66%;
+}
+
+.col6{
+  width:50%;
+}
+
+.col7{
+  width:58.33%;
+}
+
+
+
+.col8{
+  width:66.66%;
+}
+
+.col9{
+  width:75%;
+  margin:0 auto;
+
+}
+
+.col10{
+  width:83.33%;
+}
+
+.col11{
+  width:91.66%;
+}
+
+.col12{
+width: 100%;
+
+}
+
+
+.gal_sep {
+height: 100px;
+
+}
+
+
+.col7 ul{
+
+  list-style-type: none;
+  margin:0 auto;
+  text-align: center;
+}
+
+.col2 ul{
+margin-top:300px;
+  list-style: none;
+}
+
+.col2 li{
+  font-size:20px;
+}
+.col2 li p {
+  font-size: 30px;
+}
+
+.text-box{
+  margin-top: 100px;
+  height: 60%;
+width:100%;
+border-radius: 25px;
+background-color: rgba(255, 255, 240, 0.0);
+
+}
+.text-box p {
+  font-size: 40px;
+  color: black;
+  opacity: 1;
+  text-align: center;
+  font-family: 'Old Standard TT', serif;
+}
+
+
+
+
+.cssmenu {
+  background: #333333;
+  width: auto;
+text-align: center;
+
+}
+
+
+.cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+  text-align: center;
+
+}
+
+.cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+    margin: 0 auto;
+    width:150px;
+}
+
+
+.cssmenu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+
+.cssmenu ul li a:hover:before {
+  width: 100%;
+}
+
+.cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  background:white;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+
+.drop{
+width:100%;
+background-color:#333333 ;
+height:50px;
+display:none;
+}
+
+@media screen and (max-width: 1067px){
+.cssmenu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+      margin: 0 auto;
+      width:120px;
+  }
+
+  .cssmenu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    -webkit-transition: color .25s;
+    -moz-transition: color .25s;
+    -ms-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
+  }
+  .row3{
+      width: auto;
+      display:block;
+      flex-wrap: nowrap;
+      text-align: center;
+      clear: both;
+       overflow: auto;
+  }
+  .l{
+    margin: 0 auto;
+
+  }
+  .m{
+    margin: 0 auto;
+
+  }
+.r{
+  margin: 0 auto;
+
+}
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+.menu{
+display:block;
+
+}
+
+
+
+.row3{
+    width: 100%;
+    display:inline;
+text-align: center;
+
+
+}
+
+
+
+}
+
+
+@media screen and (max-width: 600px){
+.drop{
+display: block;
+
+}
+.cssmenu{
+  display:none;
+}
+
+.cssmenu ul li {
+  display: block;
+  padding: 0;
+  margin: 0;
+    margin: 0 auto;
+    width:120px;
+}
