@@ -1,2 +1,2 @@
 # Munchies
-project to be turned in as a midterm
+front end project for my midterm that I want to to be able to build a mongodb database for
