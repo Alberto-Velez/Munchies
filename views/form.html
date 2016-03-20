@@ -10,7 +10,7 @@
 
 <title>Project 1</title>
 </head>
-<body>
+
 <body>
   <div class="drop">
 <div class="burg">
@@ -25,10 +25,10 @@
   <div class='cssmenu'>
 
 <ul>
-
+<li><a href='http://localhost:3000'><span>Home</span></a></li>
 <li ><a href='http://localhost:3000/menu'><span>Menu</span></a></li>
 <li><a href='http://localhost:3000/gallery'><span>Gallery</span></a></li>
-<li><a href='http://localhost:3000/form'><span>Contact Us</span></a></li>
+
 </ul>
 </div>
 
@@ -37,26 +37,27 @@
 
 
 <div class="row2">
+<div class="sub"
 
   <p>Subscribe to recive emails regarding special events</p>
-  <form action="http://localhost:3000/email" method="POST">
+  <form name="subscribe" action="http://localhost:3000/email" method="POST" onsubmit="return checkForm()">
 
- <div class="text"> First Name: </div><input type="text" name="first">  <br>
+ <div class="text"> First Name: </div><input type="text" name="first" required>  <br>
 
- <div class="text">  Last Name: </div><input type="text" name="last"><br>
+ <div class="text">  Last Name: </div><input type="text" name="last" required><br>
 
-  <div class="text"> Email:</div><input type="text" name="email"> <br>
+  <div class="text"> Email:</div><input type="text" name="email" required> <br>
 
     <input type="submit" value="Submit">
   </form>
 
 <div class="contact">
 <p> If you need to contact us please call at 347-553-2309.<p>
-  <p> Feel free to email us at <a href="mailto:nkkvlz@gmail.com">Munchies email</a></p>
-
+  <p> Feel free to email us at <a href="mailto:nkkvlz@gmail.com">Munchies@munchies.com</a></p>
 </div>
 </div>
 
 
+</div>
 </body>
 </html>
