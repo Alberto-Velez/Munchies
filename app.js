@@ -19,41 +19,70 @@ MongoClient.connect('mongodb://localhost:27017/munchies', function(err, db){
 
 app.get('/', function(req, res){
 res.render('index.html' );
-console.log("index");
+
 });
 
 app.get('/gallery', function(req, res){
 res.render('gallery.html' );
-console.log("gallery");
+
 });
 
 
 
 app.get('/form', function(req, res){
 res.render('form.html');
-console.log("form");
+
 });
 
 app.get('/menu', function(req, res){
 res.render('menu.html');
-console.log("menu");
+
 });
+
 
 app.post('/email',  function (req, res) {
 
-   // Prepare output in JSON format
-   response = {
-       first_name:req.body.name,
-       last_name:req.body.email
+
+
+//console.log(numItems);
+
+var email= req.body.email;
+response = {
+       "_id":req.body.email,
+       "name":{"last_name":req.body.last,
+       "first_name": req.body.first}
    };
-   console.log(response);
 
 
-   this.db.collection('munchies').updateOne(
-               {"$push" :{"name":response}});
 
+ var findemail = function(db,email, callback) {
+   var cursor =db.collection('subscriptions').find({"_id": email} );
+   cursor.count(function(err, doc) {
+      assert.equal(err, null);
+      console.log(doc);
+      if (doc <1) {
+        db.collection("subscriptions").insert(response, {w:1}, function(err, result) {});
    res.end(JSON.stringify("entered into db"));
+          } else {
+            callback();
+      res.end(JSON.stringify("You seem to be already subscribed please cheack spam mailbox"));
+      }
+   });
+};
+
+
+
+
+
+findemail(db, email, function() {
+
+});
+
+
+
+
 })
+
 
 app.use(function(req, res){
   res.sendStatus(404);
