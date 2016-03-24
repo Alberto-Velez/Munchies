@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<!--Alberto Velez
+    midterm project -->
  <link rel="stylesheet" type="text/css" href="form.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="form.js" type="text/javascript">></script>
 <link href='https://fonts.googleapis.com/css?family=Peralta' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
-<title>Project 1</title>
+<title>Contact Us</title>
 </head>
-
 <body>
-  <div class="drop">
+<body>
+   <div class="drop">
 <div class="burg">
 
 </div>
@@ -25,11 +26,11 @@
   <div class='cssmenu'>
 
 <ul>
-<li><a href='http://localhost:3000'><span>Home</span></a></li>
-<li ><a href='http://localhost:3000/menu'><span>Menu</span></a></li>
-<li><a href='http://localhost:3000/gallery'><span>Gallery</span></a></li>
 
-</ul>
+  <li><a href='../index/index.html'><span>Home</span></a></li>
+  <li ><a href='../menu/menu.html'><span>Menu</span></a></li>
+  <li><a href='../gallery/gallery.html'><span>Gallery</span></a></li>
+
 </div>
 
 </div>
@@ -40,7 +41,7 @@
 <div class="sub"
 
   <p>Subscribe to receive emails regarding special events</p>
-  <form name="subscribe" action="http://localhost:3000/email" method="POST" onsubmit="return checkForm()">
+  <form name="subscribe" action="http://localhost:3000/email" class="subscribe" method="POST" onsubmit="return checkForm()">
 
  <div class="text"> First Name: </div><input type="text" name="first" required>  <br>
 
@@ -50,10 +51,14 @@
 
     <input type="submit" value="Submit">
   </form>
-
+  
+<form name="unsubscribe" class="unsubscribe" action="http://localhost:3000/unsubscribe" method="POST" onsubmit="return checkForm()">
+  Email:<input type="text" name="email" required> <input type="submit" value="Unsubscribe">
+</form>
+<div class="unsub"> Unsubscribe</div>
 <div class="contact">
 <p> If you need to contact us please call at 347-553-2309.<p>
-  <p> Feel free to email us at <a href="mailto:nkkvlz@gmail.com">Munchies@munchies.com</a></p>
+  <p> Feel free to email us at <a href="mailto:nkkvlz@gmail.com">helpdesk@munchies.com</a></p>
 </div>
 </div>
 
