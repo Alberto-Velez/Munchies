@@ -4,6 +4,15 @@ engines = require('consolidate'),
 MongoClient = require('mongodb').MongoClient,
 assert = require('assert');
 bodyParser = require('body-parser');
+var nodemailer = require("nodemailer");
+
+var smtpTransport = nodemailer.createTransport("SMTP",{
+   service: "Gmail",
+   auth: {
+       user: //
+       pass: //
+   }
+})
 
 
 app.engine('html', engines.nunjucks);
@@ -47,13 +56,12 @@ app.post('/email',  function (req, res) {
 //console.log(numItems);
 
 var email= req.body.email;
+var name= req.body.first + req.body.last;
 response = {
        "_id":req.body.email,
        "name":{"last_name":req.body.last,
        "first_name": req.body.first}
    };
-
-
 
  var findemail = function(db,email, callback) {
    var cursor =db.collection('subscriptions').find({"_id": email} );
@@ -74,16 +82,39 @@ response = {
 
 
 
-findemail(db, email, function() {
+findemail(db, email, function() {});
 
+var mailOptions={
+    from: //an email,
+     to : email,
+     subject : "I did it" ,
+     text : "I sent an email through the app"
+ }
+
+ smtpTransport.sendMail(mailOptions, function(error, response){
+  if(error){
+         console.log(error);
+  }else{
+         console.log("Message sent: " + response.message);
+
+      }
 });
-
-
-
-
+//res.render("email.html", name );
 })
 
 
+
+app.post('/unsubscribe',  function (req, res){
+	
+	
+var unsubscribe= function(db,email,callback){
+db.subscriptions.remove( {"_id": email},{justOne: true} );
+
+
+}
+var email= req.body.unsub; 
+unsubscribe(db, email,function(){})
+}
 app.use(function(req, res){
   res.sendStatus(404);
 });
