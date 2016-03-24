@@ -61,7 +61,7 @@ font-size:25px;
 }
 
 
-form {
+.subscribe{
 
 
     margin: 0 auto;
@@ -72,23 +72,24 @@ form {
    display:inline-block;
 }
 
-
-
-.text{
-	padding:5px;
+.unsubscribe{
+	display:none;
 }
+
+
 
 input{
 	margin:10px;
 	}
 
-
-textarea {
-
-    vertical-align: top;
-    height: 5em;
-    resize: vertical;
+.unsub{
+	font-size: 18px;
+	color:#0041c4;
+	 cursor: pointer;
+	
 }
+
+
 .cssmenu {
   background: #333333;
   width: auto;
