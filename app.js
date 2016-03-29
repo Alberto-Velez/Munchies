@@ -7,11 +7,14 @@ bodyParser = require('body-parser');
 var nodemailer = require("nodemailer");
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
-   service: "Gmail",
-   auth: {
-       user: //
-       pass: //
-   }
+    service: "Gmail",
+    auth: {
+      user: "",
+       pass: "",
+        server: "smtp.gmail.com",
+         port: 465
+
+    }
 })
 
 
@@ -73,7 +76,7 @@ response = {
    res.end(JSON.stringify("entered into db"));
           } else {
             callback();
-      res.end(JSON.stringify("You seem to be already subscribed please cheack spam mailbox"));
+      res.end(JSON.stringify("You seem to be already subscribed please check spam mailbox"));
       }
    });
 };
@@ -83,41 +86,50 @@ response = {
 
 
 findemail(db, email, function() {});
+console.log(email);
+var mailOptions = {
+    from: "nkkvlz@gmail.com", // sender address
+    to: email, // list of receivers
+    subject: "Email from Munchies ", // Subject line
+    text: "Thank you for subscribing with us ", // plaintext body
+    html: "<b>Thank you for subscribing with us </b>" // html body
+}
 
-var mailOptions={
-    from: //an email,
-     to : email,
-     subject : "I did it" ,
-     text : "I sent an email through the app"
- }
-
- smtpTransport.sendMail(mailOptions, function(error, response){
-  if(error){
-         console.log(error);
-  }else{
-         console.log("Message sent: " + response.message);
-
-      }
-});
-//res.render("email.html", name );
+// send mail with defined transport object
+smtpTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+        console.log(error);
+    }else{
+        console.log("Message sent: " + response.message);
+    }
 })
 
 
+});
 
-app.post('/unsubscribe',  function (req, res){
-	
-	
+
+
+app.post('/unsubscribe',  function (req, res)
+{
+
+var email= req.body.remail;
 var unsubscribe= function(db,email,callback){
-db.subscriptions.remove( {"_id": email},{justOne: true} );
+  console.log(email);
+db.collection('subscriptions').remove( {"_id": email},{justOne: true} );
 
 
 }
-var email= req.body.unsub; 
+
+
 unsubscribe(db, email,function(){})
-}
+});
+
+
+
 app.use(function(req, res){
   res.sendStatus(404);
 });
+
 
 var server = app.listen(3000, function() {
   var port=server.address().port;
