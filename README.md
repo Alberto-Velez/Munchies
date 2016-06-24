@@ -1,2 +1,2 @@
 # Munchies
-front end project for my midterm that I want to to be able to build a mongodb database for
+Front End midterm project. Had to create a website for a restaurant. It is mobile friendly and uses a MongoDB database. 
